@@ -16,21 +16,17 @@ Simulate a brute force login scenario on a Windows VM to observe and capture fai
 for ($i=1; $i -le 10; $i++) {
     net use \\127.0.0.1\IPC$ /user:FakeUser WrongPassword
 }
-'''
+```
+
 ## Observations
-Windows Event ID 4625 was logged for each failed login attempt.
+Windows Event ID **4625** was logged for each failed login attempt.
 
 The logs included details such as:
-
-Username: FakeUser
-
-IP Address: 127.0.0.1
-
-Failure Reason: Unknown username or bad password
+- **Username**: FakeUser
+- **IP Address**: 127.0.0.1
+- **Failure Reason**: Unknown username or bad password
 
 ## Detection in SIEM
-In Kibana/Wazuh, Event ID 4625 appeared multiple times.
-
-Filter used: event.code:"4625"
-
-The SIEM dashboard showed a spike in failed login attempts over a short time window.
+- In Kibana/Wazuh, Event ID 4625 appeared multiple times.
+- **Filter used**: `event.code:"4625"`
+- The SIEM dashboard showed a spike in failed login attempts over a short time window.
