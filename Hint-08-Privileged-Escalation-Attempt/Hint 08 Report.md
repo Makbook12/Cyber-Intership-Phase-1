@@ -11,9 +11,9 @@ Simulate and detect activities where a user attempts to elevate privileges on a 
 ```powershell
 net user attacker P@ssword123 /add
 net localgroup administrators attacker /add
-'''
+```
 ### Tests Performed
-| Source   | Event ID | Description                     |
+| Source   |Event ID | Description                     |
 | -------- | -------- | ------------------------------- |
 | Security | 4720     | User account creation           |
 | Security | 4732     | User added to Admin group       |
