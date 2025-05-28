@@ -24,7 +24,7 @@ This exercise reflects real-world tactics used by attackers during initial acces
 
 ---
 
-## 🧪 Step-by-Step Simulation
+## 🧪 Simulation
 
 ### ✅ Enable PowerShell Script Block Logging
 Use:Invoke-WebRequest -Uri "http://example.com" -OutFile "testfile.html"
