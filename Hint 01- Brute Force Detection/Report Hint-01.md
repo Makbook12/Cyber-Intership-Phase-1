@@ -16,7 +16,7 @@ Simulate a brute force login scenario on a Windows VM to observe and capture fai
 for ($i=1; $i -le 10; $i++) {
     net use \\127.0.0.1\IPC$ /user:FakeUser WrongPassword
 }
-
+'''
 ## Observations
 Windows Event ID 4625 was logged for each failed login attempt.
 
